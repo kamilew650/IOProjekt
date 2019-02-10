@@ -31,7 +31,7 @@ public class LoginActivity extends AppCompatActivity {
 
         btnLogin = (Button) findViewById(R.id.logInButton);
         btnRegister = (Button) findViewById(R.id.backButton);
-        txtPassword = (EditText) findViewById(R.id.password);
+        txtPassword = (EditText) findViewById(R.id.oldPassword);
         txtEmail = (EditText) findViewById(R.id.eMail);
 
 

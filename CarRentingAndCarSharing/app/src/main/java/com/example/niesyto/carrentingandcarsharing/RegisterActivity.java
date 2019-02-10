@@ -22,7 +22,7 @@ public class RegisterActivity extends AppCompatActivity {
         btnBack = (Button) findViewById(R.id.backButton);
         btnRegister= (Button) findViewById(R.id.createAccountButton);
         txtEmail =(EditText) findViewById(R.id.eMail);
-        txtPassword =(EditText) findViewById(R.id.password);
+        txtPassword =(EditText) findViewById(R.id.oldPassword);
         txtConfirm=(EditText) findViewById(R.id.passwordConfirm);
 
         session = new SessionManager(getApplicationContext());

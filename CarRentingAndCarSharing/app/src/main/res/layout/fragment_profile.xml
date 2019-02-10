@@ -28,4 +28,48 @@
         android:layout_marginTop="8dp"
         android:text="name here"
         android:textSize="18dp" />
+
+    <EditText
+        android:id="@+id/newPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="34dp"
+        android:ems="10"
+        android:hint="Nowe hasło"
+        android:inputType="textPassword" />
+
+    <EditText
+        android:id="@+id/newPasswordConfirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/newPassword"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Potwierdź hasło"
+        android:inputType="textPassword" />
+
+    <EditText
+        android:id="@+id/oldPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/newPasswordConfirm"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Obecne hasło"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/changePasswordButton"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+        android:layout_width="213dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/oldPassword"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="14dp"
+        android:background="@android:color/holo_green_dark"
+        android:text="Zmień hasło" />
 </RelativeLayout>
