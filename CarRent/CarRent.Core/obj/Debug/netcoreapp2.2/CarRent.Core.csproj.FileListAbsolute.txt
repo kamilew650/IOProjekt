@@ -1,0 +1,12 @@
+C:\Users\Adam\Desktop\IO\Sources\CarRent\CarRent.Core\bin\Debug\netcoreapp2.2\CarRent.Core.deps.json
+C:\Users\Adam\Desktop\IO\Sources\CarRent\CarRent.Core\bin\Debug\netcoreapp2.2\CarRent.Core.dll
+C:\Users\Adam\Desktop\IO\Sources\CarRent\CarRent.Core\obj\Debug\netcoreapp2.2\CarRent.Core.csprojAssemblyReference.cache
+C:\Users\Adam\Desktop\IO\Sources\CarRent\CarRent.Core\obj\Debug\netcoreapp2.2\CarRent.Core.csproj.CoreCompileInputs.cache
+C:\Users\Adam\Desktop\IO\Sources\CarRent\CarRent.Core\obj\Debug\netcoreapp2.2\CarRent.Core.AssemblyInfoInputs.cache
+C:\Users\Adam\Desktop\IO\Sources\CarRent\CarRent.Core\obj\Debug\netcoreapp2.2\CarRent.Core.AssemblyInfo.cs
+C:\Users\Adam\Desktop\IO\Sources\CarRent\CarRent.Core\obj\Debug\netcoreapp2.2\CarRent.Core.csproj.CopyComplete
+C:\Users\Adam\Desktop\IO\Sources\CarRent\CarRent.Core\bin\Debug\netcoreapp2.2\CarRent.Core.pdb
+C:\Users\Adam\Desktop\IO\Sources\CarRent\CarRent.Core\bin\Debug\netcoreapp2.2\CarRent.Common.dll
+C:\Users\Adam\Desktop\IO\Sources\CarRent\CarRent.Core\bin\Debug\netcoreapp2.2\CarRent.Common.pdb
+C:\Users\Adam\Desktop\IO\Sources\CarRent\CarRent.Core\obj\Debug\netcoreapp2.2\CarRent.Core.dll
+C:\Users\Adam\Desktop\IO\Sources\CarRent\CarRent.Core\obj\Debug\netcoreapp2.2\CarRent.Core.pdb

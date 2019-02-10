@@ -1,10 +1,19 @@
+using CarRent.Authorization;
+using CarRent.Common;
+using CarRent.Core;
+using CarRent.Services;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SpaServices.AngularCli;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using System;
 
 namespace CarRent
 {
@@ -20,15 +29,49 @@ namespace CarRent
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<DbAppContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+
+            services.AddIdentity<User, Role>()
+              .AddEntityFrameworkStores<DbAppContext>()
+              .AddDefaultTokenProviders();
+
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+
+            services.AddScoped<ITestService, TestService>();
+
+            services.AddAuthorization(auth =>
+            {
+                auth.AddPolicy(UserRoles.Owner.ToString(), new AuthorizationPolicyBuilder()
+                    .AddAuthenticationSchemes(JwtBearerDefaults.AuthenticationScheme)
+                    .AddRequirements(new RoleRequirement(UserRoles.Owner.ToString()))
+                    .RequireAuthenticatedUser().Build());
+
+                auth.AddPolicy(UserRoles.Admin.ToString(), new AuthorizationPolicyBuilder()
+                    .AddAuthenticationSchemes(JwtBearerDefaults.AuthenticationScheme)
+                    .AddRequirements(new RoleRequirement(UserRoles.Admin.ToString()))
+                    .RequireAuthenticatedUser().Build());
+
+                auth.AddPolicy(UserRoles.Support.ToString(), new AuthorizationPolicyBuilder()
+                    .AddAuthenticationSchemes(JwtBearerDefaults.AuthenticationScheme)
+                    .AddRequirements(new RoleRequirement(UserRoles.Support.ToString()))
+                    .RequireAuthenticatedUser().Build());
+
+                auth.AddPolicy(UserRoles.User.ToString(), new AuthorizationPolicyBuilder()
+                    .AddAuthenticationSchemes(JwtBearerDefaults.AuthenticationScheme)
+                    .AddRequirements(new RoleRequirement(UserRoles.User.ToString()))
+                    .RequireAuthenticatedUser().Build());
+            });
+
 
             // In production, the Angular files will be served from this directory
             services.AddSpaStaticFiles(configuration => { configuration.RootPath = "ClientApp/dist"; });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, IServiceProvider serviceProvider)
         {
+            IoCContainter.Provider = (ServiceProvider)serviceProvider;
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
