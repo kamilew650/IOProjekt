@@ -1,0 +1,9 @@
+C:\Users\Adam\Desktop\IO\Sources\CarRent\CarRent.Common\bin\Debug\netcoreapp2.2\CarRent.Common.deps.json
+C:\Users\Adam\Desktop\IO\Sources\CarRent\CarRent.Common\bin\Debug\netcoreapp2.2\CarRent.Common.dll
+C:\Users\Adam\Desktop\IO\Sources\CarRent\CarRent.Common\bin\Debug\netcoreapp2.2\CarRent.Common.pdb
+C:\Users\Adam\Desktop\IO\Sources\CarRent\CarRent.Common\obj\Debug\netcoreapp2.2\CarRent.Common.csprojAssemblyReference.cache
+C:\Users\Adam\Desktop\IO\Sources\CarRent\CarRent.Common\obj\Debug\netcoreapp2.2\CarRent.Common.csproj.CoreCompileInputs.cache
+C:\Users\Adam\Desktop\IO\Sources\CarRent\CarRent.Common\obj\Debug\netcoreapp2.2\CarRent.Common.AssemblyInfoInputs.cache
+C:\Users\Adam\Desktop\IO\Sources\CarRent\CarRent.Common\obj\Debug\netcoreapp2.2\CarRent.Common.AssemblyInfo.cs
+C:\Users\Adam\Desktop\IO\Sources\CarRent\CarRent.Common\obj\Debug\netcoreapp2.2\CarRent.Common.dll
+C:\Users\Adam\Desktop\IO\Sources\CarRent\CarRent.Common\obj\Debug\netcoreapp2.2\CarRent.Common.pdb
